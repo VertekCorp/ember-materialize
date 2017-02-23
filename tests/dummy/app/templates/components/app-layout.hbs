@@ -1,0 +1,30 @@
+<header>
+  <nav>
+    <div class="nav-wrapper">
+      {{link-to "Ember MaterializeCss" "index" class="brand-logo"}}
+      <ul class="right">
+        {{#link-to "forms" tagName="li"}}
+          {{link-to "Forms" "forms"}}
+        {{/link-to}}
+        {{#link-to "cards" tagName="li"}}
+          {{link-to "Cards" "cards"}}
+        {{/link-to}}
+        {{#link-to "copyright" tagName="li"}}
+          {{link-to "Copyright" "copyright"}}
+        {{/link-to}}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+  {{outlet}}
+</main>
+
+<footer>
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      {{mc-copyright startYear=2016}}
+    </div>
+  </footer>
+</footer>

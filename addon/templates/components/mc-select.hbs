@@ -1,0 +1,10 @@
+{{#if icon}}
+  <i class="material-icons prefix">{{icon}}</i>
+{{/if}}
+<select>
+  <option value="" selected>Select...</option>
+  {{#each content as |item|}}
+    <option value="{{get item optionValuePath}}">{{get item optionLabelPath}}</option>
+  {{/each}}
+</select>
+<label>{{label}}</label>

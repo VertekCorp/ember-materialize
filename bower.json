@@ -1,4 +1,6 @@
 {
   "name": "ember-materializecss",
-  "dependencies": {}
+    "dependencies": {
+      "materialize": "0.98.0"
+    }
 }

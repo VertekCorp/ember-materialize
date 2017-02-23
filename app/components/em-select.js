@@ -1,1 +1,1 @@
-export { default } from 'ember-materializecss/components/em-select';
+export { default } from 'ember-materialize/components/em-select';

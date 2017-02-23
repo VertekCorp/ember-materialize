@@ -1,11 +1,11 @@
-# ember-materializecss
+# ember-materialize
 
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd ember-materializecss`
+* `cd ember-materialize`
 * `npm install`
 * `bower install`
 

@@ -1,1 +1,1 @@
-export { default } from 'ember-materializecss/components/em-card';
+export { default } from 'ember-materialize/components/em-card';

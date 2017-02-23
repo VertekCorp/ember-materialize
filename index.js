@@ -27,7 +27,7 @@ var FONTS = [
 
 
 module.exports = {
-    name: 'ember-materializecss',
+    name: 'ember-materialize',
     included: function(appOrAddon) {
         this._super.included(appOrAddon);
         var app = appOrAddon;

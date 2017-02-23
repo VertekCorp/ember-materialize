@@ -1,1 +1,1 @@
-export { default } from 'ember-materializecss/components/em-copyright';
+export { default } from 'ember-materialize/components/em-copyright';

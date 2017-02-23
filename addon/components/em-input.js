@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/mc-input';
+import layout from '../templates/components/em-input';
 const { Component, isPresent, computed } = Ember;
 
 export default Component.extend({

@@ -1,1 +1,0 @@
-export { default } from 'ember-materializecss/components/mc-card';

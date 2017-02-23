@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/mc-copyright';
+import layout from '../templates/components/em-copyright';
 const { computed } = Ember;
 
 export default Ember.Component.extend({

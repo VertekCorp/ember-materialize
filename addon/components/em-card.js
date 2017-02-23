@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/mc-card';
+import layout from '../templates/components/em-card';
 
 export default Ember.Component.extend({
     layout,

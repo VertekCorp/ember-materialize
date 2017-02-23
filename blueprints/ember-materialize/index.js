@@ -1,6 +1,6 @@
 /*jshint node:true*/
 module.exports = {
-    description: 'ember-materialize-shim installation blueprint',
+    description: 'ember-materialize installation blueprint',
     normalizeEntityName: function() {},
     beforeInstall: function() {
       var that = this;

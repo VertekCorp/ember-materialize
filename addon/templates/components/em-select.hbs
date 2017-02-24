@@ -1,8 +1,8 @@
 {{#if icon}}
   <i class="material-icons prefix">{{icon}}</i>
 {{/if}}
-<select>
-  <option value="" selected>Select...</option>
+<select onchange={{action (mut value) value="target.value"}}>
+  <option value="">{{prompt}}</option>
   {{#each content as |item|}}
     <option value="{{get item optionValuePath}}">{{get item optionLabelPath}}</option>
   {{/each}}

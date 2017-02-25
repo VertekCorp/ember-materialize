@@ -32,7 +32,20 @@
 
     <div class="section">
       <p>A basic select input</p>
-      {{em-select label="Your Options" content=selectOptions optionLabelPath="value" optionValuePath="value"}}
+      {{em-select label="Your Options"
+        content=selectOptions
+        optionLabelPath="value" optionValuePath="value"
+        value=selectedOption}}
+      <p>You selected: {{selectedOption}}</p>
+    </div>
+
+    <div class="section">
+      <p>A basic select input</p>
+      {{em-select label="Your Options"
+        content=selectOptions
+        optionLabelPath="value" optionValuePath="value"
+        value=preSelectedOption}}
+      <p>Pre-Selected: {{preSelectedOption}}</p>
     </div>
 
   </div>

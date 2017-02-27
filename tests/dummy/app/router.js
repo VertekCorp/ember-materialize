@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
     this.route('forms');
     this.route('cards');
+    this.route('collapsibles');
     this.route('copyright');
 });
 

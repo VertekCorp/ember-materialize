@@ -1,4 +1,6 @@
-{{#em-card title="Copyright"}}
-  <p>A basic copyright component that never needs updating.</p>
-  {{em-copyright startYear=1974 text="Me, all rights reserved"}}
+{{#em-card title="Copyright" as |card|}}
+  {{#card.content}}
+    <p>A basic copyright component that never needs updating.</p>
+    {{em-copyright startYear=1974 text="Me, all rights reserved"}}
+  {{/card.content}}
 {{/em-card}}

@@ -1,6 +1,5 @@
-<div class="card-content">
-  {{#if title}}
-    <span class="card-title">{{title}}</span>
-  {{/if}}
-  {{yield}}
-</div>
+{{yield (hash
+  title=(component 'em-card-title')
+  content=(component 'em-card-content' title=title)
+  actions=(component 'em-card-action')
+)}}

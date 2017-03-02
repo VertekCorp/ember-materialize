@@ -1,0 +1,50 @@
+{{#em-card title="Tabs"}}
+  <div class="section">
+
+    <h5 class="title">Tabs on a single route</h5>
+
+    <div class="row">
+      <div class="col s12">
+        {{#em-tabs}}
+          <ul class="tabs">
+            <li class="tab col s4"><a class="active" href="#tab1">Tab 1</a></li>
+            <li class="tab col s4"><a href="#tab2">Tab 2</a></li>
+            <li class="tab col s4"><a href="#tab3">Tab 3</a></li>
+          </ul>
+        {{/em-tabs}}
+      </div>
+      <div id="tab1" class="col s12">
+        tab one content
+      </div>
+      <div id="tab2" class="col s12">
+        tab two content
+      </div>
+      <div id="tab3" class="col s12">
+        tab three content
+      </div>
+    </div>
+
+  </div>
+  <div class="divider"></div>
+
+  <div class="section">
+    <h5 class="title">Tabs rendering child routes to an outlet</h5>
+
+    <div class="row">
+      <div class="col s12">
+        {{#em-tabs}}
+          <ul class="tabs">
+            <li class="tab col s4">{{link-to "Tab1" "tabs.index"}}</li>
+            <li class="tab col s4">{{link-to "Tab2" "tabs.tab2"}}</li>
+            <li class="tab col s4">{{link-to "Tab3" "tabs.tab3"}}</li>
+          </ul>
+        {{/em-tabs}}
+      </div>
+
+      <div class="col s12">
+        {{outlet}}
+      </div>
+    </div>
+
+  </div>
+{{/em-card}}

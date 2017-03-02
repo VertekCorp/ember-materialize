@@ -48,6 +48,15 @@
       <p>Pre-Selected: {{preSelectedOption}}</p>
     </div>
 
+    <h5>Checkbox</h5>
+
+    <div class="section">
+      <p>A basic checkbox</p>
+      {{em-checkbox label="Cats" checked=true on-checked-change=(action "doit")}}
+      {{em-checkbox label="Dogs" filled=true checked=true on-checked-change=(action "doit")}}
+      {{em-checkbox label="Squids" value="squids" checked=true on-checked-change=(action "doit")}}
+    </div>
+
   </div>
 
 {{/em-card}}

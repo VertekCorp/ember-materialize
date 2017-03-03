@@ -1,2 +1,39 @@
-{{app-layout}}
+{{#app-layout}}
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        {{link-to "Ember Materialize" "index" class="brand-logo"}}
+        <ul class="right">
+          {{#link-to "forms" tagName="li"}}
+            {{link-to "Forms" "forms"}}
+          {{/link-to}}
+          {{#link-to "cards" tagName="li"}}
+            {{link-to "Cards" "cards"}}
+          {{/link-to}}
+          {{#link-to "collapsibles" tagName="li"}}
+            {{link-to "Collapsibles" "collapsibles"}}
+          {{/link-to}}
+          {{#link-to "copyright" tagName="li"}}
+            {{link-to "Copyright" "copyright"}}
+          {{/link-to}}
 
+          {{#link-to "tabs" tagName="li"}}
+            {{link-to "Tabs" "tabs"}}
+          {{/link-to}}
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {{outlet}}
+  </main>
+
+  <footer>
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        {{em-copyright startYear=2016}}
+      </div>
+    </footer>
+  </footer>
+{{/app-layout}}

@@ -1,28 +1,30 @@
-{{#em-card title="Collapsibles"}}
-  <div class="section">
-    <p>A basic accordion collapsible</p>
-    {{#em-collapsible as |emc|}}
-      <li>
-        {{#emc.header}}
-          <i class="material-icons">bug_report</i>
-          First
-        {{/emc.header}}
-        {{#emc.body}}First body{{/emc.body}}
-      </li>
-      <li>
-        {{#emc.header}}
-          <i class="material-icons">build</i>
-          Second
-        {{/emc.header}}
-        {{#emc.body}}Second body{{/emc.body}}
-      </li>
-      <li>
-        {{#emc.header}}
-          <i class="material-icons">check_circle</i>
-          Third
-        {{/emc.header}}
-        {{#emc.body}}Third body{{/emc.body}}
-      </li>
-    {{/em-collapsible}}
-  </div>
+{{#em-card title="Collapsibles" as |card|}}
+  {{#card.content}}
+    <div class="section">
+      <p>A basic accordion collapsible</p>
+      {{#em-collapsible as |emc|}}
+        <li>
+          {{#emc.header}}
+            <i class="material-icons">bug_report</i>
+            First
+          {{/emc.header}}
+          {{#emc.body}}First body{{/emc.body}}
+        </li>
+        <li>
+          {{#emc.header}}
+            <i class="material-icons">build</i>
+            Second
+          {{/emc.header}}
+          {{#emc.body}}Second body{{/emc.body}}
+        </li>
+        <li>
+          {{#emc.header}}
+            <i class="material-icons">check_circle</i>
+            Third
+          {{/emc.header}}
+          {{#emc.body}}Third body{{/emc.body}}
+        </li>
+      {{/em-collapsible}}
+    </div>
+  {{/card.content}}
 {{/em-card}}

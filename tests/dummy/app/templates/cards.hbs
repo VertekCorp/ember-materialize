@@ -1,35 +1,34 @@
-{{#em-card title="Cards"}}
+{{#em-card title="Cards" as |card|}}
+  {{#card.content}}
+    <div class="section">
+      <p>A basic card.</p>
+      {{#em-card title="Basic Card" as |card|}}
+        {{#card.content}}
+          <p>Some content here.</p>
+        {{/card.content}}
+      {{/em-card}}
+    </div>
 
-  <div class="section">
-    <p>A basic card.</p>
-    {{#em-card title="Basic Card" as |card|}}
-      {{#card.content}}
-        <p>Some content here.</p>
-      {{/card.content}}
-    {{/em-card}}
+    <div class="section">
+      <p>A card with actions</p>
 
-  </div>
+      {{#em-card as |card|}}
+        {{#card.content}}
+          {{#card.title}}A Basic Card{{/card.title}}
+          <p>Some content here.</p>
+        {{/card.content}}
+        {{#card.actions}}
+          <a href="#">Action 1</a>
+          <a>Action 2</a>
+        {{/card.actions}}
+      {{/em-card}}
+    </div>
 
-  <div class="section">
-    <p>A card with actions</p>
-
-    {{#em-card as |card|}}
-      {{#card.content}}
-        {{#card.title}}A Basic Card{{/card.title}}
-        <p>Some content here.</p>
-      {{/card.content}}
-      {{#card.actions}}
-        <a href="#">Action 1</a>
-        <a>Action 2</a>
-      {{/card.actions}}
-    {{/em-card}}
-  </div>
-
-  <div class="section">
-    <p>A card with some color</p>
-    {{#em-card title="I like teal" class="teal lighten-2" as |card|}}
-      {{#card.content}}<p class="white-text">A card of any color</p>{{/card.content}}
-    {{/em-card}}
-  </div>
-
+    <div class="section">
+      <p>A card with some color</p>
+      {{#em-card title="I like teal" class="teal lighten-2" as |card|}}
+        {{#card.content}}<p class="white-text">A card of any color</p>{{/card.content}}
+      {{/em-card}}
+    </div>
+  {{/card.content}}
 {{/em-card}}

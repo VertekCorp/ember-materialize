@@ -1,9 +1,10 @@
-{{#em-card title="Welcome"}}
-  <p>
-    Welcome to Ember Materialize.
-  </p>
-  <p>
-    This Ember Addon aims to be an alternative for developer's looking for a simple wrapper for the Materialize CSS project.
-  </p>
+{{#em-card title="Welcome" as |card|}}
+  {{#card.content}}
+    <p>
+      Welcome to Ember Materialize.
+    </p>
+    <p>
+      This Ember Addon aims to be an alternative for developer's looking for a simple wrapper for the Materialize CSS project.
+    </p>
+  {{/card.content}}
 {{/em-card}}
-

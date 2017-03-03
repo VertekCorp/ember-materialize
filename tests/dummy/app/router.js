@@ -11,6 +11,12 @@ Router.map(function() {
     this.route('cards');
     this.route('collapsibles');
     this.route('copyright');
+
+    this.route('tabs', { path: '/tabs' }, function() {
+      this.route('index');
+      this.route('tab2');
+      this.route('tab3');
+    });
 });
 
 export default Router;

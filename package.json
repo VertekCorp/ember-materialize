@@ -14,7 +14,7 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
-    "start": "rm -rf dist tmp && ember server",
+    "start": "rm -rf dist tmp && ember server --port 4201 --live-reload-port 49153",
     "test": "ember try:each"
   },
   "dependencies": {

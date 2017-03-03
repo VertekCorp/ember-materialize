@@ -8,8 +8,8 @@ export default Component.extend({
     return `${this.get('elementId')}-checkbox`;
   }),
 
-  checkedDidChange: observer('checked', function() {
-    this.sendAction('on-checked-changed', this.get('checked'), this.get('value'));
+  checkedDidChange: observer('checked', 'value', function() {
+    this.sendAction('on-checked-change', this.get('checked'), this.get('value'));
   })
 
 });

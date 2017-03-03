@@ -1,62 +1,69 @@
-{{#em-card title="Forms"}}
-
-  <div class="section">
-    <h5 class="title">Inputs</h5>
-
+{{#em-card title="Forms" as |card|}}
+  {{#card.content}}
     <div class="section">
-      <p>A basic text input with a label</p>
-      {{em-input label="Full Name"}}
+      <h5 class="title">Inputs</h5>
+
+      <div class="section">
+        <p>A basic text input with a label</p>
+        {{em-input label="Full Name"}}
+      </div>
+
+      <div class="section">
+        <p>A text input with an icon</p>
+        {{em-input label="Email" icon="email"}}
+      </div>
+
+      <div class="section">
+        <p>A text input with a placeholder</p>
+        {{em-input placeholder="Your name here"}}
+      </div>
+
+      <div class="section">
+        <p>A disabled text input</p>
+        {{em-input label="Name" disabled=true}}
+      </div>
+
+      <div class="section">
+        <p>A password input</p>
+        {{em-input label="Password" type="password"}}
+      </div>
+
+      <h5>Selects</h5>
+
+      <div class="section">
+        <p>A basic select input</p>
+        {{em-select label="Your Options"
+          content=selectOptions
+          optionLabelPath="value" optionValuePath="value"
+          value=selectedOption}}
+        <p>You selected: {{selectedOption}}</p>
+      </div>
+
+      <div class="section">
+        <p>A pre-selected select input</p>
+        {{em-select label="Your Options"
+          content=selectOptions
+          optionLabelPath="value" optionValuePath="value"
+          value=preSelectedOption}}
+        <p>Pre-Selected: {{preSelectedOption}}</p>
+      </div>
+
+      <h5>Checkbox</h5>
+
+      <div class="section">
+        <p>A basic checkbox</p>
+        {{em-checkbox label="Cats" value="cats" checked=true on-checked-change=(action "doit")}}
+        {{em-checkbox label="Dogs" value="dogs" checked=false on-checked-change=(action "doit")}}
+        {{em-checkbox label="Squids" value="squids" checked=true on-checked-change=(action "doit")}}
+      </div>
+
+      <div class="section">
+        <p>A basic filled checkbox</p>
+        {{em-checkbox label="Cats" value="cats" checked=true on-checked-change=(action "doit") filled=true}}
+        {{em-checkbox label="Dogs" value="dogs" checked=false on-checked-change=(action "doit") filled=true}}
+        {{em-checkbox label="Squids" value="squids" checked=true on-checked-change=(action "doit") filled=true}}
+      </div>
+
     </div>
-
-    <div class="section">
-      <p>A text input with an icon</p>
-      {{em-input label="Email" icon="email"}}
-    </div>
-
-    <div class="section">
-      <p>A text input with a placeholder</p>
-      {{em-input placeholder="Your name here"}}
-    </div>
-
-    <div class="section">
-      <p>A disabled text input</p>
-      {{em-input label="Name" disabled=true}}
-    </div>
-
-    <div class="section">
-      <p>A password input</p>
-      {{em-input label="Password" type="password"}}
-    </div>
-
-    <h5>Selects</h5>
-
-    <div class="section">
-      <p>A basic select input</p>
-      {{em-select label="Your Options"
-        content=selectOptions
-        optionLabelPath="value" optionValuePath="value"
-        value=selectedOption}}
-      <p>You selected: {{selectedOption}}</p>
-    </div>
-
-    <div class="section">
-      <p>A pre-selected select input</p>
-      {{em-select label="Your Options"
-        content=selectOptions
-        optionLabelPath="value" optionValuePath="value"
-        value=preSelectedOption}}
-      <p>Pre-Selected: {{preSelectedOption}}</p>
-    </div>
-
-    <h5>Checkbox</h5>
-
-    <div class="section">
-      <p>A basic checkbox</p>
-      {{em-checkbox label="Cats" checked=true on-checked-change=(action "doit")}}
-      {{em-checkbox label="Dogs" filled=true checked=true on-checked-change=(action "doit")}}
-      {{em-checkbox label="Squids" value="squids" checked=true on-checked-change=(action "doit")}}
-    </div>
-
-  </div>
-
+  {{/card.content}}
 {{/em-card}}

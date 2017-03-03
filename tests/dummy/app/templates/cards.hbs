@@ -11,7 +11,6 @@
 
     <div class="section">
       <p>A card with actions</p>
-
       {{#em-card as |card|}}
         {{#card.content}}
           {{#card.title}}A Basic Card{{/card.title}}
@@ -30,5 +29,64 @@
         {{#card.content}}<p class="white-text">A card of any color</p>{{/card.content}}
       {{/em-card}}
     </div>
+
+    <div class="section">
+      <p>An image card</p>
+      <div class="row">
+        <div class="col s12 m6 l4">
+          {{#em-card as |card|}}
+            {{#card.image}}
+              <img src="http://lorempixel.com/400/400"/>
+              {{#card.title tagName="span"}}Rando{{/card.title}}
+            {{/card.image}}
+            {{#card.content}}
+              <p>Check out this photo.</p>
+            {{/card.content}}
+          {{/em-card}}
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p>An image card with a FAB (fixed action button)</p>
+      <div class="row">
+        <div class="col s12 m6 l4">
+          {{#em-card as |card|}}
+            {{#card.image}}
+              <img src="http://lorempixel.com/400/400"/>
+              {{#card.title tagName="span"}}Rando{{/card.title}}
+              <a class="btn-floating halfway-fab waves-effect waves-light red">
+                <i class="material-icons">add</i>
+              </a>
+            {{/card.image}}
+            {{#card.content}}
+              <p>Check out this photo.</p>
+            {{/card.content}}
+          {{/em-card}}
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p>A horizontal image card </p>
+      <div class="row">
+        <div class="col s12 m6 l4">
+          {{#em-card class="horizontal" as |card|}}
+            {{#card.image}}
+              <img src="http://lorempixel.com/400/400"/>
+            {{/card.image}}
+            <div class="card-stacked">
+              {{#card.content}}
+                <p>Check out this photo.</p>
+              {{/card.content}}
+              {{#card.actions}}
+                <a>Link</a>
+              {{/card.actions}}
+            </div>
+          {{/em-card}}
+        </div>
+      </div>
+    </div>
+
   {{/card.content}}
 {{/em-card}}

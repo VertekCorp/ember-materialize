@@ -40,6 +40,16 @@
       </div>
 
       <div class="section">
+        <p>A select input binding to an object</p>
+        {{em-select label="Your Options"
+          content=selectOptions
+          optionLabelPath="value"
+          optionValuePath="value"
+          selection=selectedObject}}
+        <p>You selected: {{selectedObject}} - ({{selectedObject.value}})</p>
+      </div>
+
+      <div class="section">
         <p>A pre-selected select input</p>
         {{em-select label="Your Options"
           content=selectOptions

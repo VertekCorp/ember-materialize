@@ -16,6 +16,7 @@ export default Route.extend({
     setupController(controller, model) {
         controller.set('selectOptions', model);
         controller.set('selectedOption', null);
+        controller.set('selectedObject', null);
         controller.set('preSelectedOption', SELECT_OPTIONS[1].value);
     }
 });

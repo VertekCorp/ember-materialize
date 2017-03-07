@@ -1,5 +1,19 @@
 {{#if icon}}
   <i class="material-icons prefix">{{icon}}</i>
 {{/if}}
-{{input id=id value=value type=type disabled=disabled placeholder=placeholder}}
+{{input id=id value=value type=type disabled=disabled placeholder=placeholder focusOut=(action "on-focus-out")}}
+{{!-- <label for={{id}}>{{label}}</label> --}}
+{{#if _wasBlurred}}
+  {{#if icon}}
+    <span style="padding-left: 45px;" class="red-text text-darken-4">
+      blurred
+    </span>
+  {{else}}
+    <span class="red-text text-darken-2">
+      blurred
+    </span>
+  {{/if}}
+{{else}}
+  &nbsp;
+{{/if}}
 <label for={{id}}>{{label}}</label>

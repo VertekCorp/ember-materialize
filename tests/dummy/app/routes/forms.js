@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const { Route, A } = Ember;
+const { Route, A, RSVP } = Ember;
 
 const SELECT_OPTIONS = A([
   { value: 'Option 1' },
@@ -9,14 +9,13 @@ const SELECT_OPTIONS = A([
 ]);
 
 export default Route.extend({
-  model() {
-    return SELECT_OPTIONS;
-  },
-
-  setupController(controller, model) {
-    controller.set('selectOptions', model);
-    controller.set('selectedOption', null);
-    controller.set('selectedObject', null);
-    controller.set('preSelectedOption', SELECT_OPTIONS[1].value);
+  setupController(controller) {
+    controller.setProperties({
+      person: Ember.Object.create({ name: 'Boba Fett', email: 'bfett@example.com'} ),
+      selectOptions: SELECT_OPTIONS,
+      selectedOption: null,
+      selectedObject: null,
+      preSelectedOption: SELECT_OPTIONS[1].value
+    });
   }
 });

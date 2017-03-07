@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const { Route, A, RSVP } = Ember;
+const { Route, A } = Ember;
 
 const SELECT_OPTIONS = A([
   { value: 'Option 1' },

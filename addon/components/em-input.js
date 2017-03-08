@@ -13,10 +13,6 @@ export default Component.extend({
     return `input-${this.get('elementId')}`;
   }),
 
-  errorStyle: computed('icon', function() {
-    return (this.get('icon')) ? 'margin-left:3rem' : '';
-  }),
-
   init() {
     this._super(...arguments);
     let attrs = this.get('attrs');
@@ -31,6 +27,9 @@ export default Component.extend({
     const $label = this.$('> label');
     if (isPresent(this.get('value')) && !$label.hasClass('active')) {
         $label.addClass('active');
+    }
+    if (this.get('attrs').icon) {
+        this.$('.em-input-error').css('margin-left', '3rem');
     }
   },
   actions: {

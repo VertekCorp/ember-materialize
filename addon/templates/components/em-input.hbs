@@ -4,7 +4,7 @@
 {{input id=id value=value type=type disabled=disabled placeholder=placeholder focusOut=(action "on-focus-out")}}
 <label for={{id}}>{{label}}</label>
 
-<div class="em-input-error" style={{errorStyle}}>
+<div class="em-input-error">
   {{#if _wasBlurred}}
     {{get validation 'message'}}
   {{/if}}

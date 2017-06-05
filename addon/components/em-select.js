@@ -22,7 +22,6 @@ export default Ember.Component.extend({
   },
   actions: {
     'on-change'(e) {
-      this.set('value', e);
       this.set('selection', this.get('content').findBy(this.get('optionValuePath'), e));
     }
   }

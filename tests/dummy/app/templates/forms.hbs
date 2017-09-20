@@ -29,6 +29,11 @@
       </div>
 
       <div class="section">
+        <p>A phone number input</p>
+        {{em-phone-input model=person path="phone" label="Phone Number" greedyMask=false}}
+      </div>
+
+      <div class="section">
         <p>A number input with min/max</p>
         {{em-input label="Number of pets" model=person path="age" type="number" min=0 max=10}}
       </div>

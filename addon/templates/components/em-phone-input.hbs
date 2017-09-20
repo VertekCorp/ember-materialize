@@ -1,0 +1,14 @@
+{{#if icon}}
+  <i class="material-icons prefix">{{icon}}</i>
+{{/if}}
+{{phone-number-input value=maskedValue unmaskedValue=value extensions=true
+  maskPlaceholder=maskPlaceholder showMaskOnFocus=showMaskOnFocus
+  showMaskOnHover=false rightAlign=rightAlign
+  clearIncomplete=clearIncomplete greedyMask=greedyMask}}
+<label for={{id}}>{{label}}</label>
+
+<div class="em-input-error">
+  {{#if _wasBlurred}}
+    {{get validation 'message'}}
+  {{/if}}
+</div>

@@ -1,7 +1,7 @@
 {{#if icon}}
   <i class="material-icons prefix">{{icon}}</i>
 {{/if}}
-<select disable=disable onchange={{action (action 'on-change') value="target.value"}}>
+<select disabled={{disabled}} onchange={{action (action 'on-change') value="target.value"}}>
   <option value="">{{prompt}}</option>
   {{#each content as |item|}}
     <option value="{{get item optionValuePath}}">{{get item optionLabelPath}}</option>

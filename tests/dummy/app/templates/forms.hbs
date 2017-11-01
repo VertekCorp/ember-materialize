@@ -50,6 +50,16 @@
       </div>
 
       <div class="section">
+        <p>A disabled select input</p>
+        {{em-select label="Your Options"
+          disabled=true
+          content=selectOptions
+          optionLabelPath="value" optionValuePath="value"
+          value=selectedOption}}
+        <p>You selected: {{selectedOption}}</p>
+      </div>
+
+      <div class="section">
         <p>A select input binding to an object</p>
         {{em-select label="Your Options"
           content=selectOptions

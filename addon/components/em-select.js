@@ -5,13 +5,24 @@ export default Ember.Component.extend({
   layout,
   classNames: ['input-field'],
   prompt: 'Select...',
+  selectionChanged: Ember.observer('value', function() {
+    let value = this.get('value');
+    Ember.$.each(this.$('option'), function(name, option) {
+      if (option.value === value) {
+        Ember.$(option).prop('selected', true);
+      } else {
+        Ember.$(option).prop('selected', false);
+      }
+    });
+    this.$('select').material_select();
+  }),
   didInsertElement() {
     this._super(...arguments);
 
     let value = this.get('value');
     Ember.$.each(this.$('option'), function(name, option) {
       if (option.value === value) {
-        Ember.$(option).attr('selected', 'selected');
+        Ember.$(option).prop('selected', true);
       }
     });
     this.$('select').material_select();
